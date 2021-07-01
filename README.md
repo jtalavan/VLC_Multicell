@@ -21,7 +21,7 @@ about PoE switch...
 
 * lifi_multicell.py: script to launch the application connecting with the network.
 
-###GUI
+### GUI
 
 This programs relies on Tcl/Tk for showing the GUI. Therefore, the library Tk
 should be available for the Python in use. This one is included in Python 3.7 
