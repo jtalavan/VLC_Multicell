@@ -30,5 +30,3 @@ or greater for Windows. In Linux, it can be used:
 ```bash
 sudo apt-get install python-tk
 ```
-
-###Devices
