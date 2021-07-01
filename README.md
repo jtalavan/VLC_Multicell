@@ -1,2 +1,3 @@
-# VLC_Multicell
-Javier Talavante MSc thesis code
+# LiFi_MultiCell
+ Scripts dedicated to managing the LiFi setup in LiFi Lab.
+# TODO: Include extensive description in here
