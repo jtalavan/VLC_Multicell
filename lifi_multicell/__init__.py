@@ -8,7 +8,7 @@ def check_modules():
     :return: none
     """
     # Modules list
-    modules = ("tkinter", "netmiko")
+    modules = ("tkinter", "netmiko", "pxssh")
     for m in modules:
         try:
             __import__(m)

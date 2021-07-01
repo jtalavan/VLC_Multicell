@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+
 from lifi_multicell.constants import *
 from lifi_multicell.views import MainView
 

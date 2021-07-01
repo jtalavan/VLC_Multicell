@@ -29,12 +29,15 @@ class MainView(tk.Frame):
         self.ssh_button.grid(row=2, column=3, sticky=tk.E)
 
         # Devices board representation
-        # TODO: Read PoE switch ports power state and draw board with this info
         self.board = w.DeviceBoard()
         self.board.grid(row=0, columnspan=4, sticky=tk.E)
         self.board.bind("<Configure>", self.redraw)
 
     def redraw(self, event=None):
+        """
+        Draws the GUI showing the network state
+        """
+
         self.board.delete("rect")
         cellwidth = int(self.board.winfo_width() / columns_dev)
         cellheight = int(self.board.winfo_height() / rows_dev)
@@ -61,7 +64,6 @@ class MainView(tk.Frame):
         if self.id_label.existingDevice(dev_Id):
             self.id_text.set(dev_Id)
 
-    # TODO: Colour in the board when ON/OFF should be changed after checking if the device is really turned on/off
     def on_device(self, state):
         dev_id = int(self.id_text.get())
         self.c.turn_on_device(dev_id)
@@ -77,7 +79,6 @@ class MainView(tk.Frame):
 
     def ssh_device(self, state):
         dev_id = int(self.id_text.get())
-        # TODO: allow SSH only on ON devices. Check it in Controller
         self.c.ssh_device(dev_id)
         self.switch_color(dev_id, state)
 
